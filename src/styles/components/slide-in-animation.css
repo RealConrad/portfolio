@@ -1,0 +1,22 @@
+@keyframes slideInTop {
+	0% {
+		transform: translateY(-100%);
+		overflow: hidden;
+	}
+	100% {
+		transform: translateY(0);
+		visibility: visible;
+	}
+}
+
+.animate-slide-in-top {
+	animation-name: slideInTop;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.delay-07 {
+	animation-delay: 0.7s;
+}

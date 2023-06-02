@@ -1,0 +1,27 @@
+.image {
+	background-image: url('/images/image1.jpg');
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+	background-position: center;
+	z-index: 1;
+}
+
+.image::after {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 30%);
+	/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%); */
+	/* background: linear-gradient(
+		0deg,
+		rgba(28, 34, 33, 0.9) 0%,
+		rgba(42, 48, 48, 0.5) 50%,
+		rgba(60, 70, 69, 0.2) 100%
+	); */
+}
