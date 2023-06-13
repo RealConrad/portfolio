@@ -7,8 +7,8 @@
 	};
 </script>
 
-<div class="fixed top-0 w-full h-10 items-center text-light">
-	<div class="flex justify-between w-full items-center pt-6 px-44">
+<div class="fixed top-0 w-full text-light">
+	<div class="flex justify-between w-full items-center py-3 px-44">
 		<div class="flex gap-x-5">
 			<Avatar imageUrl={'/images/profile.jpg'} />
 			<div class="text-lg">Conrad Wenz</div>
