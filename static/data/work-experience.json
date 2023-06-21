@@ -1,0 +1,20 @@
+{
+	"experienceData": [
+		{
+			"companyName": "WeBelieve IT",
+			"jobTitle": "Intern Frontend Developer",
+			"startMonth": "March",
+			"endMonth": "October",
+			"startMonthShort": "Mar",
+			"endMonthShort": "Oct",
+			"startYear": "2020",
+			"endYear": "2021",
+			"workDescription": [
+				"Developing and maintaining web applications using VueJS, TailwindCSS and Axios.",
+				"Working in a team including desginers, project managers and other developers.",
+				"Implementing responsive web applications and ensure cross platform/browser compatibility.",
+				"Participating in code reviews/pull requests."
+			]
+		}
+	]
+}
