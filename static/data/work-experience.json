@@ -5,15 +5,33 @@
 			"jobTitle": "Intern Frontend Developer",
 			"startMonth": "March",
 			"endMonth": "October",
-			"startMonthShort": "Mar",
-			"endMonthShort": "Oct",
-			"startYear": "2020",
-			"endYear": "2021",
+			"startMonthShort": "Mar.",
+			"endMonthShort": "Oct.",
+			"startYear": "2021",
+			"endYear": "2022",
+			"isLeftSide": true,
 			"workDescription": [
 				"Developing and maintaining web applications using VueJS, TailwindCSS and Axios.",
 				"Working in a team including desginers, project managers and other developers.",
 				"Implementing responsive web applications and ensure cross platform/browser compatibility.",
 				"Participating in code reviews/pull requests."
+			]
+		},
+		{
+			"companyName": "42 Heilbronn",
+			"jobTitle": "Student",
+			"startMonth": "March",
+			"endMonth": "Current",
+			"startMonthShort": "Mar.",
+			"endMonthShort": "",
+			"startYear": "2023",
+			"endYear": "Current",
+			"isLeftSide": false,
+			"workDescription": [
+				"Developing in C and C++.",
+				"Develping algrorithms, C Unix programming and web development.",
+				"Developing soft skills such as working in teams, communication.",
+				"Part of the 42 Network."
 			]
 		}
 	]
