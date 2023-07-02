@@ -9,7 +9,11 @@
 
 <div class="fixed top-0 w-full text-light">
 	<div class="flex justify-between w-full items-center py-3 px-44">
-		<div class="flex gap-x-5">
+		<div
+			aria-hidden="true"
+			on:click={(e) => scrollIntoView('landing-page')}
+			class="flex gap-x-5 cursor-pointer"
+		>
 			<Avatar imageUrl={'/images/profile.jpg'} />
 			<div class="text-lg">Conrad Wenz</div>
 		</div>
