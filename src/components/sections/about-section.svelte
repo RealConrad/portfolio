@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Header from './header.svelte';
-	import Roadmap from './roadmap.svelte';
-	import SkillsCard from './skills-card.svelte';
+	import Header from '../header.svelte';
+	import Roadmap from '../roadmap.svelte';
+	import SkillsCard from '../skills-card.svelte';
 </script>
 
 <div class="w-full">
