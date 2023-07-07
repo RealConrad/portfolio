@@ -1,0 +1,18 @@
+{
+	"projects": [
+		{
+			"name": "Push Swap",
+			"description": "Creating an efficient sorting algorithm.",
+			"githubUrl": "https://github.com/RealConrad/42push-swap",
+			"imageUrl": "",
+			"hoverImageUrl": ""
+		},
+		{
+			"name": "Weather App",
+			"description": "Simple weather app.",
+			"githubUrl": "",
+			"imageUrl": "",
+			"hoverImageUrl": ""
+		}
+	]
+}
