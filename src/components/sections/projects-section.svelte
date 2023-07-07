@@ -8,6 +8,7 @@
 		Welcome to my coding playground! This is where I've been putting my skills to the test and
 		creating some cool stuff. Want to see more? Swing by my <a
 			class="underline"
+			target="_blank"
 			href="https://github.com/RealConrad">Github page</a
 		> for the full lineup.
 	</div>
