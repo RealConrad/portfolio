@@ -1,7 +1,7 @@
 <script lang="ts">
-	import AboutSection from '../components/about-section.svelte';
+	import AboutSection from '../components/sections/about-section.svelte';
 	import NavBar from '../components/navbar/nav-bar.svelte';
-	import ProjectsSection from '../components/projects-section.svelte';
+	import ProjectsSection from '../components/sections/projects-section.svelte';
 </script>
 
 <div class="w-full h-screen">
