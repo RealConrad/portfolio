@@ -1,4 +1,5 @@
 interface WorkExperience {
+	id: number;
 	companyName: string;
 	jobTitle: string;
 	startMonth: string;

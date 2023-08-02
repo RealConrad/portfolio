@@ -23,3 +23,13 @@ html {
 	border-radius: inherit;
 	box-shadow: 0 0 30px #1d1a36;
 }
+
+.border-gradient-vertical::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 2px;
+	background: linear-gradient(to bottom, #45287d, #f676fd);
+}

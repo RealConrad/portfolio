@@ -30,7 +30,12 @@ export default {
 					100: '#030714'
 				},
 				darkPurple: {
-					100: '#100C28'
+					100: '#100C28',
+					200: '#45287D',
+					300: '#F676FD'
+				},
+				lightPurple: {
+					100: '#F6F1FE'
 				},
 				space: {
 					100: '#1D1A36'

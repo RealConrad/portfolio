@@ -1,61 +1,44 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	let experiences: WorkExperience[] = [];
+	import SquareIcon from './icons/square-icon.svelte';
+	let timeline: WorkExperience[] = [];
 
 	onMount(async () => {
 		const response = await fetch('data/work-experience.json');
 		const data = await response.json();
-		experiences = data.experienceData;
+		timeline = data.experienceData;
 	});
 </script>
 
-{#if experiences.length > 0}
-	<div class="relative wrap overflow-hidden p-10 h-full">
-		<div
-			class="border-2-2 absolute border-opacity-70 border-light h-full border"
-			style="left: 50%"
-		/>
-
-		{#each experiences as experience}
+<div class="mx-auto w-5/6 mt-5">
+	{#each timeline as experience, i (experience.id)}
+		<div class="group relative">
 			<div
-				class="{experience.isLeftSide
-					? 'flex-row-reverse'
-					: ''} mb-8 flex justify-between items-center w-full"
+				class="w-14 h-14 bg-richBlack-100 rounded-full absolute left-[-27px] top-0 flex items-center justify-center"
 			>
-				<div class="order-1 w-5/12" />
 				<div
-					class="z-20 flex items-center order-1 bg-gray-800 p-3 shadow-xl rounded-full justify-center text-center"
+					class="transition-all ease-in-out duration-300 group-hover:text-purple-400 group-hover:rotate-45"
 				>
-					<div class="text-sm text-light font-semibold">
-						<div>
-							{experience.startMonthShort}
-							{experience.startYear}
-						</div>
-						<div>&darr;</div>
-						<div>
-							{experience.endMonthShort}
-							{experience.endYear}
-						</div>
-					</div>
+					<SquareIcon />
 				</div>
-				<div class="order-1 bg-darkPurple-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
-					<div class="font-bold text-light text-2xl">{experience.companyName}</div>
-					<div class=" text-light text-sm">
-						{experience.jobTitle}
+			</div>
+			<div class="pl-4 border-l-2 hover:border-purple-400 pt-2.5 pb-10">
+				<div class="pl-6">
+					<div class="group-hover:text-purple-400 transition-all ease-in-out duration-300 text-3xl">
+						{experience.startYear} - {experience.endYear}
 					</div>
-					<div class="bg-light mt-4" style="height: 1px;" />
-					<div class="text-sm tracking-wide text-myGrey-300">
-						{#each experience.workDescription as work}
-							<div class="flex gap-x-2">
-								<div class="pt-1">&#x2022</div>
-								<div class="py-1">{work}</div>
-							</div>
+					<div>
+						<span class="font-semibold text-lg">{experience.companyName}</span> •
+						<span class="italic text-sm">{experience.jobTitle}</span>
+					</div>
+					<div class="italic text-sm" />
+					<div class="pl-2 text-gray-300">
+						{#each experience.workDescription as description}
+							<div>• {description}</div>
 						{/each}
 					</div>
 				</div>
 			</div>
-		{/each}
-	</div>
-{:else}
-	<div>Oops! Looks like something went wrong. Try again later.</div>
-{/if}
+		</div>
+	{/each}
+</div>

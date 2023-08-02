@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div>
-		<Header size={'text-4xl'} title={'Work Experience'} />
+		<Header size={'text-4xl'} title={'My Journey'} />
 		<Roadmap />
 	</div>
 </div>
