@@ -26,6 +26,9 @@ export default {
 					300: '#C4BEC3',
 					400: '#67697A'
 				},
+				mySlate: {
+					100: '#333'
+				},
 				richBlack: {
 					100: '#030714'
 				},
@@ -35,7 +38,8 @@ export default {
 					300: '#F676FD'
 				},
 				lightPurple: {
-					100: '#F6F1FE'
+					100: '#F6F1FE',
+					200: '#9D00FF'
 				},
 				space: {
 					100: '#1D1A36'

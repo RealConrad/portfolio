@@ -1,18 +1,18 @@
 {
 	"projects": [
 		{
+			"id": 1,
 			"name": "Push Swap",
 			"description": "Creating an efficient sorting algorithm.",
-			"githubUrl": "https://github.com/RealConrad/42push-swap",
-			"imageUrl": "",
-			"hoverImageUrl": ""
+			"href": "https://github.com/RealConrad/42push-swap",
+			"imageUrl": "/images/push-swap/push_swap1.png"
 		},
 		{
-			"name": "Weather App",
-			"description": "Simple weather app.",
-			"githubUrl": "",
-			"imageUrl": "",
-			"hoverImageUrl": ""
+			"id": 2,
+			"name": "So Long",
+			"description": "A simple 2D game.",
+			"href": "https://github.com/RealConrad/42so-long",
+			"imageUrl": "/images/push-swap/push_swap.png"
 		}
 	]
 }

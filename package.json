@@ -31,5 +31,7 @@
 		"vite": "^4.3.0"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"@types/node": "^20.4.6"
+	}
 }

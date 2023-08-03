@@ -22,10 +22,14 @@
 					<SquareIcon />
 				</div>
 			</div>
-			<div class="pl-4 border-l-2 hover:border-purple-400 pt-2.5 pb-10">
+			<div
+				class="pl-4 border-l-2 group-hover:border-purple-400 transition-all ease-in-out duration-300 pt-2.5 pb-10"
+			>
 				<div class="pl-6">
 					<div class="group-hover:text-purple-400 transition-all ease-in-out duration-300 text-3xl">
-						{experience.startYear} - {experience.endYear}
+						{experience.startYear}<span class="text-xs">{experience.startMonthShort}</span> - {experience.endYear}<span
+							class="text-xs">{experience.endMonthShort}</span
+						>
 					</div>
 					<div>
 						<span class="font-semibold text-lg">{experience.companyName}</span> •

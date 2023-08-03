@@ -26,7 +26,7 @@
 		<section id="About" class="pt-48 z-20">
 			<AboutSection />
 		</section>
-		<section id="Projects" class="py-48">
+		<section id="Projects" class="pt-48" style="height: 2000px;">
 			<ProjectsSection />
 		</section>
 	</div>
