@@ -23,10 +23,10 @@
 		</div>
 	</section>
 	<div class="bg-richBlack-100 text-light px-60 w-full">
-		<section id="About" class="pt-48 z-20">
+		<section id="About" class="pt-28 z-20">
 			<AboutSection />
 		</section>
-		<section id="Projects" class="pt-48" style="height: 2000px;">
+		<section id="Projects" class="pt-28" style="height: 2000px;">
 			<ProjectsSection />
 		</section>
 	</div>

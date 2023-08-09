@@ -1,31 +1,82 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	export let project: Project;
+	let divElement: HTMLDivElement;
+	let divHeight: number = 0;
+	let isHovered: boolean = false;
+
+	onMount(() => {
+		divHeight = divElement.clientHeight;
+		console.log('Div height:', divHeight);
+	});
 </script>
 
-<div class="w-96 h-[400px] rounded-lg shadow-md overflow-hidden">
-	<div class="relative h-full w-full">
-		<div class="absolute inset-0">
-			<img class="w-full h-full object-cover" src={project.imageUrl} alt="" />
-			<svg class="absolute top-[155px] text-mySlate-100" viewBox="0 0 800 600">
-				<path
-					d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
-					stroke="transparent"
-					fill="currentColor"
-				/>
-				<path
-					class="stroke-2"
-					d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
-					fill="transparent"
-				/>
-				<rect x="0" y="500" width="800" height="50" fill="currentColor" />
-			</svg>
-		</div>
-		<div class="absolute inset-0 flex flex-col justify-end px-4 pt-1 pb-2">
-			<div class="text-white text-2xl font-extrabold tracking-tight">{project.name}</div>
-			<div class="text-gray-300">
-				{project.description}
-				<a class="underline whitespace-nowrap" href={project.href} target="_blank">Learn more</a>
+<div class="{isHovered ? 'rotating-border' : ''} relative">
+	<div
+		on:mouseover={() => (isHovered = true)}
+		on:mouseout={() => (isHovered = false)}
+		on:focus={() => (isHovered = true)}
+		on:blur={() => (isHovered = false)}
+		class="w-96 h-[400px] z-10 rounded-lg overflow-hidden absolute p-1"
+	>
+		<img class="w-full h-full object-cover {isHovered ? '' : ''}" src={project.imageUrl} alt="" />
+
+		<div class="absolute inset-x-0 bottom-0 flex flex-col justify-end p-4">
+			<div
+				class="absolute bottom-0 left-0 pl-4 pb-3 text-white text-2xl font-extrabold tracking-tight rounded transition-transform duration-300 transform"
+				style={isHovered ? `transform: translateY(-${divHeight + 10}px);` : ''}
+			>
+				{project.name}
+			</div>
+
+			<div
+				bind:this={divElement}
+				class="opacity-0 {isHovered
+					? 'opacity-100 translate-y-0'
+					: 'translate-y-full'} transition-all duration-300 rounded"
+			>
+				<div class="text-gray-300">
+					{project.description}
+					<a class="underline whitespace-nowrap" href={project.href} target="_blank">Learn more</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<style>
+	.rotating-border {
+		box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+		border-radius: 5px;
+		width: 386px;
+		height: 400px;
+		overflow: hidden;
+	}
+	.rotating-border::before {
+		background-image: conic-gradient(rgb(147 51 234) 20deg, transparent 120deg);
+		content: '';
+		height: 150%;
+		width: 150%;
+		position: absolute;
+		left: -25%;
+		top: -25%;
+		animation: rotate 4s infinite linear;
+	}
+
+	@keyframes rotate {
+		100% {
+			transform: rotate(-360deg);
+		}
+	}
+	.rotating-border::after {
+		content: '';
+		height: 94%;
+		width: 94%;
+		position: absolute;
+		border-radius: 5px;
+		top: 2%;
+		left: 3%;
+		display: grid;
+	}
+</style>
