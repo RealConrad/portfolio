@@ -4,4 +4,5 @@ interface Project {
 	description: string;
 	href: string;
 	imageUrl: string;
+	projectType: string;
 }

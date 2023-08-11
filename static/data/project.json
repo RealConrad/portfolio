@@ -5,14 +5,16 @@
 			"name": "Push Swap",
 			"description": "Creating an efficient sorting algorithm.",
 			"href": "https://github.com/RealConrad/42push-swap",
-			"imageUrl": "/images/push-swap/push_swap1.png"
+			"imageUrl": "/images/push-swap/push_swap1.png",
+			"projectType": "42 School Project"
 		},
 		{
 			"id": 2,
 			"name": "So Long",
 			"description": "A simple 2D game.",
 			"href": "https://github.com/RealConrad/42so-long",
-			"imageUrl": "/images/push-swap/push_swap.png"
+			"imageUrl": "/images/push-swap/push_swap.png",
+			"projectType": "42 School Project"
 		}
 	]
 }

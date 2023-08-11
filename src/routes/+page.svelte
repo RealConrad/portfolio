@@ -2,6 +2,8 @@
 	import AboutSection from '../components/sections/about-section.svelte';
 	import NavBar from '../components/navbar/nav-bar.svelte';
 	import ProjectsSection from '../components/sections/projects-section.svelte';
+	import ContactSection from '../components/sections/contact-section.svelte';
+	import FooterSection from '../components/sections/footer-section.svelte';
 </script>
 
 <div class="w-full h-screen">
@@ -26,8 +28,14 @@
 		<section id="About" class="pt-28 z-20">
 			<AboutSection />
 		</section>
-		<section id="Projects" class="pt-28" style="height: 2000px;">
+		<section id="Projects" class="pt-28">
 			<ProjectsSection />
+		</section>
+		<section id="Contact" class="pt-28">
+			<ContactSection />
+		</section>
+		<section id="Footer">
+			<FooterSection />
 		</section>
 	</div>
 </div>
