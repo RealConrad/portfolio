@@ -1,0 +1,10 @@
+.angledFill {
+	background-image: linear-gradient(115deg, rgb(168 85 247) 50%, transparent 50%);
+	background-size: 230% 200%;
+	background-position: 100% 0;
+	transition: background-position 0.5s ease-out;
+}
+
+button:hover .angledFill {
+	background-position: 0 0;
+}

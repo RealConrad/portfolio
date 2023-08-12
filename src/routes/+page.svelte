@@ -4,6 +4,7 @@
 	import ProjectsSection from '../components/sections/projects-section.svelte';
 	import ContactSection from '../components/sections/contact-section.svelte';
 	import FooterSection from '../components/sections/footer-section.svelte';
+	import LandingPageSection from '../components/sections/landing-page-section.svelte';
 </script>
 
 <div class="w-full h-screen">
@@ -11,18 +12,7 @@
 		conflicts with roadmap component -->
 	<section id="landing-page" class="image w-full h-full z-50">
 		<NavBar />
-		<div class="h-full w-full flex justify-center items-center text-light text-center">
-			<div>
-				<div class="overflow-hidden">
-					<div class="text-6xl font-bold animate-slide-in-top delay-07">Hi, I'm Conrad</div>
-				</div>
-				<div class="overflow-hidden mt-5">
-					<div class="text-base animate-slide-in-top delay-09">
-						Front-End Developer & C-Programmer
-					</div>
-				</div>
-			</div>
-		</div>
+		<LandingPageSection />
 	</section>
 	<div class="bg-richBlack-100 text-light px-60 w-full">
 		<section id="About" class="pt-28 z-20">
@@ -31,7 +21,7 @@
 		<section id="Projects" class="pt-28">
 			<ProjectsSection />
 		</section>
-		<section id="Contact" class="pt-28" style="height: 2000px">
+		<section id="Contact" class="pt-28">
 			<ContactSection />
 		</section>
 		<section id="Footer">

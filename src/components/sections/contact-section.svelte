@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '../header.svelte';
+	import CustomButton from '../input/custom-button.svelte';
 	import Input from '../input/input.svelte';
 	import Textarea from '../input/textarea.svelte';
 
@@ -31,6 +32,9 @@
 		</div>
 		<div class="pt-10">
 			<Textarea on:input={(e) => (message = e.detail)} label="Your message" isRequired={true} />
+		</div>
+		<div class="flex justify-center pt-8">
+			<CustomButton buttonType={'Submit'} buttonName={'Submit'} />
 		</div>
 	</div>
 </div>

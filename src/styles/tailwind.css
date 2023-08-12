@@ -1,6 +1,7 @@
 @import './components/background.css';
 @import './components/fonts.css';
 @import './components/slide-in-animation.css';
+@import './components//button.css';
 
 @tailwind base;
 @tailwind components;
