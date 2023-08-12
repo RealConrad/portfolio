@@ -12,9 +12,13 @@
 >
 	<div class="pb-8">
 		{#if icon === 'fe'}
-			<CssIcon />
+			<div class="w-10 h-10 mt-6">
+				<CssIcon />
+			</div>
 		{:else if icon === 'c'}
-			<CodeIcon />
+			<div class="w-10 h-10 mt-3">
+				<CodeIcon />
+			</div>
 		{/if}
 	</div>
 	<div class="text-xl font-bold">

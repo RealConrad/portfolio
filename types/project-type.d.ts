@@ -2,7 +2,8 @@ interface Project {
 	id: number;
 	name: string;
 	description: string;
-	href: string;
+	githubUrl: string;
 	imageUrl: string;
 	projectType: string;
+	technologies: string[];
 }

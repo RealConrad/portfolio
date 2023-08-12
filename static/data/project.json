@@ -3,18 +3,20 @@
 		{
 			"id": 1,
 			"name": "Push Swap",
-			"description": "Creating an efficient sorting algorithm.",
-			"href": "https://github.com/RealConrad/42push-swap",
+			"description": "Creating an efficient sorting algorithm. Sorts a stack of numbers in ascending order.",
+			"githubUrl": "https://github.com/RealConrad/42push-swap",
 			"imageUrl": "/images/push-swap/push_swap1.png",
-			"projectType": "42 School Project"
+			"projectType": "School Project",
+			"technologies": ["C", "Git", "VSCode"]
 		},
 		{
 			"id": 2,
 			"name": "So Long",
-			"description": "A simple 2D game.",
-			"href": "https://github.com/RealConrad/42so-long",
+			"description": "A simple 2D game where the player has to collectable all the coins while avoiding enemies.",
+			"githubUrl": "https://github.com/RealConrad/42so-long",
 			"imageUrl": "/images/push-swap/push_swap.png",
-			"projectType": "42 School Project"
+			"projectType": "School Project",
+			"technologies": ["C", "MLX42", "Git", "VSCode"]
 		}
 	]
 }

@@ -31,7 +31,7 @@
 		<section id="Projects" class="pt-28">
 			<ProjectsSection />
 		</section>
-		<section id="Contact" class="pt-28">
+		<section id="Contact" class="pt-28" style="height: 2000px">
 			<ContactSection />
 		</section>
 		<section id="Footer">
