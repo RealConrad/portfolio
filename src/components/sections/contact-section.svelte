@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '../header.svelte';
+	import RocketIcon from '../icons/rocket-icon.svelte';
 	import CustomButton from '../input/custom-button.svelte';
 	import Input from '../input/input.svelte';
 	import Textarea from '../input/textarea.svelte';

@@ -32,6 +32,11 @@
 		style="width: {divTotalWidth}; height: 10px;"
 	/>
 	<div class="relative z-20 border px-8 py-2 rounded-sm border-purple-500 angledFill">
-		{buttonName}
+		<div class=" w-full flex gap-x-3 items-center">
+			<slot />
+			<div>
+				{buttonName}
+			</div>
+		</div>
 	</div>
 </button>

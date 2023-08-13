@@ -24,8 +24,8 @@
 		<section id="Contact" class="pt-28">
 			<ContactSection />
 		</section>
-		<section id="Footer">
-			<FooterSection />
-		</section>
 	</div>
+	<section id="Footer" class="bg-richBlack-100 pt-28">
+		<FooterSection />
+	</section>
 </div>
