@@ -21,11 +21,11 @@
 		<section id="Projects" class="pt-28">
 			<ProjectsSection />
 		</section>
-		<section id="Contact" class="pt-28">
+		<section id="Contact" class="py-28">
 			<ContactSection />
 		</section>
 	</div>
-	<section id="Footer" class="bg-richBlack-100 pt-28">
+	<section id="Footer" class="bg-richBlack-100">
 		<FooterSection />
 	</section>
 </div>

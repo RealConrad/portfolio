@@ -34,7 +34,7 @@
 								{#each project.technologies as tech, i}
 									{tech}
 									{#if i != project.technologies.length - 1}
-										<span class="-ml-1">,&nbsp;</span>
+										<span class="-ml-1">&nbsp;•&nbsp;</span>
 									{/if}
 								{/each}
 							</div>

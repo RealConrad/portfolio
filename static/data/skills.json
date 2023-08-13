@@ -1,0 +1,14 @@
+{
+	"skills": [
+		{
+			"id": 1,
+			"language": "C",
+			"percentage": 80
+		},
+		{
+			"id": 2,
+			"language": "JavaScript",
+			"percentage": 70
+		}
+	]
+}
