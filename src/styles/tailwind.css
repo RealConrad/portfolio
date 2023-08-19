@@ -11,26 +11,26 @@ html {
 	scroll-behavior: smooth;
 }
 
-.glow {
-	overflow: visible;
-}
-.glow::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: inherit;
-	box-shadow: 0 0 30px #1d1a36;
+@keyframes rotateCircle {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
 }
 
-.border-gradient-vertical::before {
-	content: '';
+.circle-spin {
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 2px;
-	background: linear-gradient(to bottom, #45287d, #f676fd);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 240px;
+	height: 230px;
+	border-radius: 50%;
+	border-top: 0.1rem solid transparent;
+	border-bottom: 0.1rem solid transparent;
+	border-left: 0.1rem solid rgb(245 158 11);
+	border-right: 0.1rem solid rgb(245 158 11);
+	animation: rotateCircle 8s linear infinite;
 }

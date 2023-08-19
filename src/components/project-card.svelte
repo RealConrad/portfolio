@@ -6,7 +6,9 @@
 	export let project: Project;
 </script>
 
-<div class="mt-10 bg-myGrey-600 border-2 border-myGrey-500 w-[500px] h-[500px] rounded-2xl">
+<div
+	class="mt-10 bg-myGrey-600 border-2 border-myGrey-500 hover:border-purple-600 ease-in-out duration-300 w-[500px] h-[500px] rounded-2xl"
+>
 	<div class="p-4">
 		<img class="w-full h-[250px] rounded-lg object-cover" alt="" src={project.imageUrl} />
 		<div class="p-3">

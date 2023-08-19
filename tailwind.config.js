@@ -3,9 +3,6 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
-			boxShadow: {
-				glow: '0 0 10px #a855f7, 0 0 10px #a855f7, 0 0 10px #a855f7, 0 0 10px #a855f7'
-			},
 			colors: {
 				light: '#fff',
 				darkGreen: {

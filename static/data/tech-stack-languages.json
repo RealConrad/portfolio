@@ -1,0 +1,58 @@
+{
+	"tech": [
+		{
+			"id": 1,
+			"name": "C-Programming",
+			"skillsIconName": "c",
+			"href": "https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170"
+		},
+		{
+			"id": 2,
+			"name": "JavaScript",
+			"skillsIconName": "js",
+			"href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+		},
+		{
+			"id": 3,
+			"name": "TypeScript",
+			"skillsIconName": "ts",
+			"href": "https://www.typescriptlang.org/"
+		},
+		{
+			"id": 4,
+			"name": "VueJS",
+			"skillsIconName": "vue",
+			"href": "https://vuejs.org/"
+		},
+		{
+			"id": 5,
+			"name": "HTML5",
+			"skillsIconName": "html",
+			"href": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
+		},
+		{
+			"id": 6,
+			"name": "CSS",
+			"skillsIconName": "css",
+			"href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+		},
+		{
+			"id": 7,
+			"name": "Tailwind",
+			"skillsIconName": "tailwind",
+			"href": "https://tailwindcss.com/"
+		},
+		{
+			"id": 8,
+			"name": "VSCode",
+			"skillsIconName": "vscode",
+			"href": "https://code.visualstudio.com/"
+		},
+		{
+			"id": 9,
+			"name": "Git",
+			"skillsIconName": "git",
+			"href": "https://git-scm.com/"
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"tech": [
+		{
+			"id": 1,
+			"name": "C#",
+			"skillsIconName": "cs",
+			"href": "https://learn.microsoft.com/en-us/dotnet/csharp/"
+		},
+		{
+			"id": 2,
+			"name": "Unity",
+			"skillsIconName": "unity",
+			"href": "https://unity.com/"
+		},
+		{
+			"id": 3,
+			"name": "Blender",
+			"skillsIconName": "blender",
+			"href": "https://www.blender.org/"
+		}
+	]
+}

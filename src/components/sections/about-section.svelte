@@ -1,7 +1,30 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Header from '../header.svelte';
 	import Roadmap from '../roadmap.svelte';
-	import SkillProgessBar from '../skill-progess-bar.svelte';
+	import TechStackItem from '../tech-stack-item.svelte';
+
+	let techStackLanguages: TechStack[] | undefined = [];
+	let techStackLearning: TechStack[] | undefined = [];
+
+	const getData = async (filePath: string): Promise<TechStack[] | undefined> => {
+		try {
+			const response = await fetch(filePath);
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`);
+			}
+			const data = await response.json();
+			return data.tech;
+		} catch (error) {
+			console.error('Error:', error);
+			return undefined;
+		}
+	};
+
+	onMount(async () => {
+		techStackLanguages = await getData('data/tech-stack-languages.json');
+		techStackLearning = await getData('/data/tech-stack-learning.json');
+	});
 </script>
 
 <div class="w-full">
@@ -15,7 +38,7 @@
 			<span class="circle-spin" />
 		</div>
 		<Header title={'About'} />
-		<div class="">
+		<div>
 			<div class="w-3/4 text-gray-200 pt-6">
 				<div>
 					Hello! I'm Conrad. A digital enthusiast deeply passionate about breathing life into ideas,
@@ -35,8 +58,22 @@
 			</div>
 		</div>
 		<div class="py-10">
-			<Header size={'text-4xl'} title={'Current Skillset'} />
-			<SkillProgessBar />
+			<Header size={'text-4xl'} title={'Tech Stack'} />
+			{#if techStackLanguages && techStackLanguages.length > 0}
+				<div class="flex gap-x-5 pt-5">
+					{#each techStackLanguages as language}
+						<TechStackItem tech={language} />
+					{/each}
+				</div>
+			{/if}
+			{#if techStackLearning && techStackLearning.length > 0}
+				<div class="pt-5 pb-1">Learning/experimenting with:</div>
+				<div class="flex gap-x-5">
+					{#each techStackLearning as other}
+						<TechStackItem tech={other} />
+					{/each}
+				</div>
+			{/if}
 		</div>
 	</div>
 	<div>
@@ -44,29 +81,3 @@
 		<Roadmap />
 	</div>
 </div>
-
-<style>
-	@keyframes rotateCircle {
-		0% {
-			transform: translate(-50%, -50%) rotate(0deg);
-		}
-		100% {
-			transform: translate(-50%, -50%) rotate(360deg);
-		}
-	}
-
-	.circle-spin {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 240px;
-		height: 230px;
-		border-radius: 50%;
-		border-top: 0.1rem solid transparent;
-		border-bottom: 0.1rem solid transparent;
-		border-left: 0.1rem solid rgb(245 158 11);
-		border-right: 0.1rem solid rgb(245 158 11);
-		animation: rotateCircle 8s linear infinite;
-	}
-</style>
