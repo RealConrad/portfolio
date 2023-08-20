@@ -4,6 +4,7 @@
 	export let inputType: string;
 	export let label: string;
 	export let isRequired: boolean;
+	export let name: string;
 
 	let localValue: string = '';
 
@@ -17,6 +18,7 @@
 
 <div class="relative w-full">
 	<input
+		{name}
 		value={localValue}
 		type={inputType}
 		required={isRequired ? true : false}

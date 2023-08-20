@@ -67,7 +67,7 @@
 				</div>
 			{/if}
 			{#if techStackLearning && techStackLearning.length > 0}
-				<div class="pt-5 pb-1">Learning/experimenting with:</div>
+				<div class="pt-5 pb-1">Currently learning:</div>
 				<div class="flex gap-x-5">
 					{#each techStackLearning as other}
 						<TechStackItem tech={other} />
