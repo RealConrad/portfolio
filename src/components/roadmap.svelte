@@ -10,7 +10,7 @@
 	});
 </script>
 
-<div class="mx-auto md:w-5/6 mt-5">
+<div class="mx-auto md:pl-10 mt-5">
 	{#each timeline as experience, i (experience.id)}
 		<div class="group relative">
 			<div
