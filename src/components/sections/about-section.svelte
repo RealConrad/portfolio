@@ -29,7 +29,7 @@
 
 <div class="w-full">
 	<div>
-		<div class="flex justify-center relative">
+		<div class="flex justify-center relative mb-5">
 			<img
 				class="border-[3px] border-amber-500 w-52 h-52 rounded-full"
 				src="images/profile2.png"

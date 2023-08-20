@@ -89,8 +89,8 @@
 	<div class="pt-5">
 		{#if !sentMessage}
 			<form on:submit|preventDefault={sendEmail} method="POST">
-				<div class="flex gap-x-10">
-					<div class="w-full">
+				<div class="md:flex gap-x-10">
+					<div class="w-full md:pb-0 pb-5">
 						<Input
 							on:input={(e) => {
 								name = e.detail;
@@ -121,7 +121,7 @@
 						{/if}
 					</div>
 				</div>
-				<div class="pt-10">
+				<div class="pt-5">
 					<Textarea
 						on:input={(e) => {
 							message = e.detail;
