@@ -8,14 +8,16 @@
 
 <div
 	class="mt-10 bg-myGrey-600 border-2 border-myGrey-500 hover:border-purple-600
-	 ease-in-out duration-300 w-[280px] md:w-[400px] h-[500px] lg:w-[420px] xl:w-[500px] rounded-2xl"
+	 ease-in-out duration-300 w-[300px] sm:w-[400px] lg:w-[420px] xl:w-[500px] md:w-[400px] h-[440px] md:h-[500px] rounded-2xl"
 >
 	<div class="p-4">
-		<img
-			class="lg:w-full w-[250px] md:h-[250px] h-[150px] rounded-lg object-cover"
-			alt=""
-			src={project.imageUrl}
-		/>
+		<div class="flex justify-center">
+			<img
+				class="md:w-full w-[250px] md:h-[250px] h-[150px] rounded-lg object-cover"
+				alt=""
+				src={project.imageUrl}
+			/>
+		</div>
 		<div class="p-3">
 			<div class="flex items-center gap-x-4">
 				<DisplayIcon {project} />
@@ -32,16 +34,14 @@
 					{project.description}
 				</div>
 				<div
-					class="absolute md:top-16 top-20 left-0 right-0 flex items-center justify-between gap-x-"
+					class="absolute md:top-16 top-20 left-0 right-0 flex items-center justify-between gap-x-5"
 				>
 					<div>
-						<div
-							class="border-2 border-myGrey-500 px-4 py-2 rounded-xl flex gap-x-3 items-center flex-wrap"
-						>
+						<div class="border-2 border-myGrey-500 px-4 py-2 rounded-xl flex gap-x-3 items-center">
 							<div class="w-5 h-5 mt-2 text-purple-600">
 								<CodeIcon />
 							</div>
-							<div>
+							<div class="flex-wrap">
 								{#each project.technologies as tech, i}
 									{tech}
 									{#if i != project.technologies.length - 1}

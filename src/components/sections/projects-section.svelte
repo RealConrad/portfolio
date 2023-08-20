@@ -21,7 +21,7 @@
 
 <div>
 	<Header title={'Projects'} />
-	<div class="text-gray-300 w-3/4 pt-6">
+	<div class="text-gray-300 md:w-3/4 md:px-0 pt-6">
 		Welcome to my coding playground! This is where I've been putting my skills to the test and
 		creating some cool stuff. Want to see more? Swing by my <a
 			class="underline"
@@ -29,9 +29,11 @@
 			href="https://github.com/RealConrad">Github page</a
 		> for the full lineup.
 	</div>
-	<div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-3">
-		{#each projects as project}
-			<ProjectCard {project} />
-		{/each}
+	<div class="flex justify-center">
+		<div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-3">
+			{#each projects as project}
+				<ProjectCard {project} />
+			{/each}
+		</div>
 	</div>
 </div>
