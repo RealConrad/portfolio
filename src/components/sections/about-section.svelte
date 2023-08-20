@@ -39,7 +39,7 @@
 		</div>
 		<Header title={'About'} />
 		<div>
-			<div class="w-3/4 text-gray-200 pt-6">
+			<div class="lg:w-3/4 w-full text-gray-200 pt-6">
 				<div>
 					Hello! I'm Conrad. A digital enthusiast deeply passionate about breathing life into ideas,
 					making them interactive and engaging. My tech adventure started when I was just 10,

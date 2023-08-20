@@ -14,7 +14,7 @@
 		<NavBar />
 		<LandingPageSection />
 	</section>
-	<div class="bg-richBlack-100 text-light px-60 w-full">
+	<div class="bg-richBlack-100 text-light xl:px-60 md:px-20 sm:px-10 px-5 w-full">
 		<section id="About" class="pt-28 z-20">
 			<AboutSection />
 		</section>
