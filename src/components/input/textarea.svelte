@@ -23,6 +23,7 @@
 		required={isRequired ? true : false}
 		id={label}
 		on:input={emitInput}
+		autocomplete="off"
 		class="px-2.5 pb-2.5 pt-4 w-full text-light bg-transparent rounded-lg border-2 border-gray-400 appearance-none focus:outline-none focus:ring-0 focus:border-purple-600 peer resize-none"
 		placeholder=""
 	/>

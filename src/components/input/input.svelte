@@ -18,6 +18,7 @@
 
 <div class="relative w-full">
 	<input
+		autocomplete="off"
 		{name}
 		value={localValue}
 		type={inputType}
