@@ -7,10 +7,15 @@
 </script>
 
 <div
-	class="mt-10 bg-myGrey-600 border-2 border-myGrey-500 hover:border-purple-600 ease-in-out duration-300 w-[500px] h-[500px] rounded-2xl"
+	class="mt-10 bg-myGrey-600 border-2 border-myGrey-500 hover:border-purple-600
+	 ease-in-out duration-300 w-[280px] md:w-[400px] h-[500px] lg:w-[420px] xl:w-[500px] rounded-2xl"
 >
 	<div class="p-4">
-		<img class="w-full h-[250px] rounded-lg object-cover" alt="" src={project.imageUrl} />
+		<img
+			class="lg:w-full w-[250px] md:h-[250px] h-[150px] rounded-lg object-cover"
+			alt=""
+			src={project.imageUrl}
+		/>
 		<div class="p-3">
 			<div class="flex items-center gap-x-4">
 				<DisplayIcon {project} />
@@ -22,13 +27,17 @@
 				</div>
 			</div>
 			<div style="height: 3px" class="w-full bg-myGrey-500 my-5" />
-			<div class="relative">
+			<div class="relative h-full w-full">
 				<div>
 					{project.description}
 				</div>
-				<div class="absolute top-16 left-0 right-0 flex justify-between">
+				<div
+					class="absolute md:top-16 top-20 left-0 right-0 flex items-center justify-between gap-x-"
+				>
 					<div>
-						<div class="border-2 border-myGrey-500 px-4 py-2 rounded-xl flex gap-x-3 items-center">
+						<div
+							class="border-2 border-myGrey-500 px-4 py-2 rounded-xl flex gap-x-3 items-center flex-wrap"
+						>
 							<div class="w-5 h-5 mt-2 text-purple-600">
 								<CodeIcon />
 							</div>

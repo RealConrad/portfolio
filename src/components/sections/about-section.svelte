@@ -60,7 +60,7 @@
 		<div class="py-10">
 			<Header size={'text-4xl'} title={'Tech Stack'} />
 			{#if techStackLanguages && techStackLanguages.length > 0}
-				<div class="flex gap-x-5 pt-5">
+				<div class="flex flex-wrap gap-y-2 gap-x-5 pt-5">
 					{#each techStackLanguages as language}
 						<TechStackItem tech={language} />
 					{/each}

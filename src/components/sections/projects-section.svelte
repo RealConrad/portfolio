@@ -29,7 +29,7 @@
 			href="https://github.com/RealConrad">Github page</a
 		> for the full lineup.
 	</div>
-	<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-10">
+	<div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-3">
 		{#each projects as project}
 			<ProjectCard {project} />
 		{/each}
