@@ -24,7 +24,7 @@
 	};
 
 	const handleKeyDown = () => {
-		//
+		// :)
 	};
 
 	const handleScroll = () => {
@@ -38,13 +38,6 @@
 	};
 </script>
 
-{#if isSidePanelOpen}
-	<div
-		on:click={toggleSidePanel}
-		on:keydown={handleKeyDown}
-		class="z-30 absolute top-0 bottom-0 left-0 right-0"
-	/>
-{/if}
 <div class="fixed z-40 top-0 w-full text-light xl:backdrop-blur-0 backdrop-blur-sm {navBg} ">
 	<div class="flex justify-between w-full items-center py-3 lg:px-44 px-8">
 		<div
@@ -65,10 +58,10 @@
 
 		{#if isSidePanelOpen}
 			<div
-				class={`absolute top-0 right-1/3 max-w-screen-md border-l w-full border-myGrey-200 bg-richBlack-100 h-screen p-4 translate-x-full duration-300 ease-in-out md:hidden`}
+				class={`absolute top-0 right-40 max-w-screen-md border-l w-full border-myGrey-200 bg-richBlack-100 h-screen p-4 translate-x-full duration-300 ease-in-out md:hidden`}
 			>
 				<div class="pb-8">
-					<div on:click={toggleSidePanel} on:keydown={handleKeyDown} class="text-light w-4 h-4">
+					<div on:click={toggleSidePanel} on:keydown={handleKeyDown} class="text-light w-6 h-6">
 						<ExitIcon />
 					</div>
 				</div>
