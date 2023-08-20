@@ -6,6 +6,7 @@
 
 	let techStackLanguages: TechStack[] | undefined = [];
 	let techStackLearning: TechStack[] | undefined = [];
+	let age: number;
 
 	const getData = async (filePath: string): Promise<TechStack[] | undefined> => {
 		try {
@@ -19,6 +20,23 @@
 			console.error('Error:', error);
 			return undefined;
 		}
+	};
+
+	const getAge = (): number => {
+		const currentDate = new Date();
+		const currentYear = currentDate.getFullYear();
+		const birthDate = new Date(2002, 4, 2); // Assuming you were born on January 1, 2002. Adjust the month and day accordingly.
+		let age = currentYear - birthDate.getFullYear();
+
+		if (
+			currentDate.getMonth() < birthDate.getMonth() ||
+			(currentDate.getMonth() === birthDate.getMonth() &&
+				currentDate.getDate() < birthDate.getDate())
+		) {
+			age--;
+		}
+
+		return age;
 	};
 
 	onMount(async () => {
@@ -41,9 +59,9 @@
 		<div>
 			<div class="lg:w-3/4 w-full text-gray-200 pt-6">
 				<div>
-					Hello! I'm Conrad. A digital enthusiast deeply passionate about breathing life into ideas,
-					making them interactive and engaging. My tech adventure started when I was just 10,
-					getting my hands on my first computer. That spark ignited a journey where I am currently
+					Hello! I'm Conrad. A {getAge()} year old digital enthusiast deeply passionate about breathing
+					life into ideas, making them interactive and engaging. My tech adventure started when I was
+					just 10, getting my hands on my first computer. That spark ignited a journey where I am currently
 					delving into game development, web crafting, and mastering C/C++ programming.
 				</div>
 				<div class="py-4">
