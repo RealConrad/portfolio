@@ -1,2 +1,2 @@
 # Portfolio Website
-You can access it <a href="conradwenz.dev">here</a>
+You can access it [here](conradwenz.dev)
