@@ -40,8 +40,33 @@
 		return age;
 	};
 
+	const downloadCV = async () => {
+		const pdfUrl = '/data/ConradWenz_Resume.pdf';
+
+		try {
+			const response = await fetch(pdfUrl);
+			const blob = await response.blob();
+
+			// Create a URL for the blob
+			const blobUrl = window.URL.createObjectURL(blob);
+
+			// Create a temporary link element and trigger the download
+			const link = document.createElement('a');
+			link.href = blobUrl;
+			link.download = 'ConradWenz_Resume.pdf'; // The default filename for the download
+			document.body.appendChild(link); // Append to the document
+			link.click(); // Trigger the download
+
+			// Clean up
+			document.body.removeChild(link);
+			window.URL.revokeObjectURL(blobUrl);
+		} catch (error) {
+			console.error('Error downloading the file:', error);
+		}
+	};
+
 	onMount(async () => {
-		techStackLanguages = await getData('data/tech-stack-languages.json');
+		techStackLanguages = await getData('/data/tech-stack-languages.json');
 		techStackLearning = await getData('/data/tech-stack-learning.json');
 	});
 </script>
@@ -77,7 +102,7 @@
 			</div>
 		</div>
 		<div class="py-10">
-			<CustomButton buttonName="Download CV" />
+			<CustomButton on:click={downloadCV} buttonName="Download CV" />
 		</div>
 		<div>
 			<Header size={'text-4xl'} title={'Tech Stack'} />
