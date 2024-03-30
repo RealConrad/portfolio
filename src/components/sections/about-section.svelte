@@ -3,6 +3,7 @@
 	import Header from '../header.svelte';
 	import Roadmap from '../roadmap.svelte';
 	import TechStackItem from '../tech-stack-item.svelte';
+	import CustomButton from '../input/custom-button.svelte';
 
 	let techStackLanguages: TechStack[] | undefined = [];
 	let techStackLearning: TechStack[] | undefined = [];
@@ -50,7 +51,7 @@
 		<div class="flex justify-center relative mb-5">
 			<img
 				class="border-[3px] border-amber-500 w-52 h-52 rounded-full"
-				src="images/profile2.png"
+				src="images/profile-picture.png"
 				alt=""
 			/>
 			<span class="circle-spin" />
@@ -66,8 +67,8 @@
 				</div>
 				<div class="py-4">
 					When I'm not immersed in code, I'm probably diving into a game, catching up on the latest
-					anime, longboarding through city streets, or getting lost in a captivating book – always
-					accompanied by a perfectly brewed cup of coffee, of course.
+					anime, or getting lost in a captivating book – always accompanied by a perfectly brewed
+					cup of coffee, of course.
 				</div>
 				<div>
 					My philosophy? Never stop learning. Stay curious. Embrace the challenges that come your
@@ -76,6 +77,9 @@
 			</div>
 		</div>
 		<div class="py-10">
+			<CustomButton buttonName="Download CV" />
+		</div>
+		<div>
 			<Header size={'text-4xl'} title={'Tech Stack'} />
 			{#if techStackLanguages && techStackLanguages.length > 0}
 				<div class="flex flex-wrap gap-y-2 gap-x-5 pt-5">
@@ -94,7 +98,7 @@
 			{/if}
 		</div>
 	</div>
-	<div>
+	<div class="pt-6">
 		<Header size={'text-4xl'} title={'My Journey'} />
 		<Roadmap />
 	</div>

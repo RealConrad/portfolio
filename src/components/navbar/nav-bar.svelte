@@ -45,7 +45,7 @@
 			on:click={() => scrollIntoView('landing-page')}
 			class="flex gap-x-5 cursor-pointer"
 		>
-			<Avatar imageUrl={'/images/profile2.png'} />
+			<Avatar imageUrl={'/images/profile-picture.png'} />
 			<div class="text-lg">Conrad Wenz</div>
 		</div>
 		<div
