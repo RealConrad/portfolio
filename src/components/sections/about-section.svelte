@@ -3,10 +3,10 @@
 	import Header from '../header.svelte';
 	import Roadmap from '../roadmap.svelte';
 	import TechStackItem from '../tech-stack-item.svelte';
+	import CustomButton from '../input/custom-button.svelte';
 
 	let techStackLanguages: TechStack[] | undefined = [];
 	let techStackLearning: TechStack[] | undefined = [];
-	let age: number;
 
 	const getData = async (filePath: string): Promise<TechStack[] | undefined> => {
 		try {
@@ -25,7 +25,7 @@
 	const getAge = (): number => {
 		const currentDate = new Date();
 		const currentYear = currentDate.getFullYear();
-		const birthDate = new Date(2002, 4, 2); // Assuming you were born on January 1, 2002. Adjust the month and day accordingly.
+		const birthDate = new Date(2002, 4, 2);
 		let age = currentYear - birthDate.getFullYear();
 
 		if (
@@ -39,8 +39,33 @@
 		return age;
 	};
 
+	const downloadCV = async () => {
+		const pdfUrl = '/data/ConradWenz_Resume.pdf';
+
+		try {
+			const response = await fetch(pdfUrl);
+			const blob = await response.blob();
+
+			// Create a URL for the blob
+			const blobUrl = window.URL.createObjectURL(blob);
+
+			// Create a temporary link element and trigger the download
+			const link = document.createElement('a');
+			link.href = blobUrl;
+			link.download = 'ConradWenz_Resume.pdf'; // The default filename for the download
+			document.body.appendChild(link); // Append to the document
+			link.click(); // Trigger the download
+
+			// Clean up
+			document.body.removeChild(link);
+			window.URL.revokeObjectURL(blobUrl);
+		} catch (error) {
+			console.error('Error downloading the file:', error);
+		}
+	};
+
 	onMount(async () => {
-		techStackLanguages = await getData('data/tech-stack-languages.json');
+		techStackLanguages = await getData('/data/tech-stack-languages.json');
 		techStackLearning = await getData('/data/tech-stack-learning.json');
 	});
 </script>
@@ -50,7 +75,7 @@
 		<div class="flex justify-center relative mb-5">
 			<img
 				class="border-[3px] border-amber-500 w-52 h-52 rounded-full"
-				src="images/profile2.png"
+				src="images/profile-picture.png"
 				alt=""
 			/>
 			<span class="circle-spin" />
@@ -66,8 +91,8 @@
 				</div>
 				<div class="py-4">
 					When I'm not immersed in code, I'm probably diving into a game, catching up on the latest
-					anime, longboarding through city streets, or getting lost in a captivating book – always
-					accompanied by a perfectly brewed cup of coffee, of course.
+					anime, or getting lost in a captivating book – always accompanied by a perfectly brewed
+					cup of coffee, of course.
 				</div>
 				<div>
 					My philosophy? Never stop learning. Stay curious. Embrace the challenges that come your
@@ -76,6 +101,9 @@
 			</div>
 		</div>
 		<div class="py-10">
+			<CustomButton on:click={downloadCV} buttonName="Download CV" />
+		</div>
+		<div>
 			<Header size={'text-4xl'} title={'Tech Stack'} />
 			{#if techStackLanguages && techStackLanguages.length > 0}
 				<div class="flex flex-wrap gap-y-2 gap-x-5 pt-5">
@@ -94,7 +122,7 @@
 			{/if}
 		</div>
 	</div>
-	<div>
+	<div class="pt-6">
 		<Header size={'text-4xl'} title={'My Journey'} />
 		<Roadmap />
 	</div>

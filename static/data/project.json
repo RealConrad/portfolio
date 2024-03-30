@@ -2,21 +2,48 @@
 	"projects": [
 		{
 			"id": 1,
-			"name": "Push Swap",
-			"description": "Creating an efficient sorting algorithm. Sorts a stack of numbers in ascending order.",
-			"githubUrl": "https://github.com/RealConrad/42push-swap",
-			"imageUrl": "/images/push-swap/push_swap1.png",
+			"name": "Mini Ray Tracer",
+			"description": "A basic, yet functional, ray tracer designed to introduce core rendering concepts and simple light interactions.",
+			"githubUrl": "https://github.com/RealConrad/42miniRT",
+			"imageUrl": "/images/projects/mini-rt.png",
 			"projectType": "School Project",
-			"technologies": ["C", "Git", "VSCode"]
+			"technologies": ["C", "VSCode", "Git"]
 		},
 		{
 			"id": 2,
+			"name": "Mini Shell",
+			"description": "A custom shell environment designed to emulate basic features of the most popular shell, Bash.",
+			"githubUrl": "https://github.com/RealConrad/42minishell",
+			"imageUrl": "/images/projects/minishell.png",
+			"projectType": "School Project",
+			"technologies": ["C", "VSCode", "Git"]
+		},
+		{
+			"id": 3,
+			"name": "Philosophers",
+			"description": "The classic synchronization and multi-threaded philosopher dining problem.",
+			"githubUrl": "https://github.com/RealConrad/42philosophers",
+			"imageUrl": "/images/projects/philo.png",
+			"projectType": "School Project",
+			"technologies": ["C", "VSCode", "Git"]
+		},
+		{
+			"id":4,
 			"name": "So Long",
 			"description": "A simple 2D game where the player has to collectable all the coins while avoiding enemies.",
 			"githubUrl": "https://github.com/RealConrad/42so-long",
-			"imageUrl": "/images/push-swap/push_swap.png",
+			"imageUrl": "/images/projects/so-long.png",
 			"projectType": "School Project",
-			"technologies": ["C", "MLX42", "Git", "VSCode"]
+			"technologies": ["C", "MLX42", "VSCode", "Git"]
+		},
+		{
+			"id": 5,
+			"name": "Mini Talk",
+			"description": "A small data exchange program using UNIX signals.",
+			"githubUrl": "https://github.com/RealConrad/42minitalk",
+			"imageUrl": "/images/projects/minitalk.png",
+			"projectType": "School Project",
+			"technologies": ["C", "VSCode", "Git"]
 		}
 	]
 }
