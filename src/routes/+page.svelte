@@ -7,7 +7,7 @@
 	import LandingPageSection from '../components/sections/landing-page-section.svelte';
 </script>
 
-<div class="w-full h-screen">
+<div class="w-full h-screen bg-richBlack-100">
 	<!-- z-50 is for navbar, wont work if i put it on component itself for some reason
 		conflicts with roadmap component -->
 	<section id="landing-page" class="image w-full h-full z-50">
