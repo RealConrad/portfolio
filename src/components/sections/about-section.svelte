@@ -25,7 +25,7 @@
 	const getAge = (): number => {
 		const currentDate = new Date();
 		const currentYear = currentDate.getFullYear();
-		const birthDate = new Date(2002, 4, 2); // Assuming you were born on January 1, 2002. Adjust the month and day accordingly.
+		const birthDate = new Date(2002, 4, 2);
 		let age = currentYear - birthDate.getFullYear();
 
 		if (
