@@ -7,7 +7,6 @@
 
 	let techStackLanguages: TechStack[] | undefined = [];
 	let techStackLearning: TechStack[] | undefined = [];
-	let age: number;
 
 	const getData = async (filePath: string): Promise<TechStack[] | undefined> => {
 		try {
